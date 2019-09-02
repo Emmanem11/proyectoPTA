@@ -1,0 +1,161 @@
+		<!DOCTYPE html>
+		<html>
+		<head>
+			<meta charset="utf-8">
+			<title>USUARIOS</title>
+			
+			<meta name="viewport" content="width=device-width, initial-scale=1">
+			<link rel="stylesheet" href="css/bootstrap.min.css">
+			<link rel="stylesheet" type="text/css" href="css/all.css">
+			<link rel="stylesheet" href="css/sweetalert2.min.css">
+			<script src="js/jquery.min.js"></script>
+			<script src="js/bootstrap.min.js"></script>
+			<script src="js/loadingoverlay.min.js"></script>
+			<script src="js/funciones.js"></script>
+			<script src="js/sweetalert2.min.js"></script>
+			
+			
+
+		</head>
+		<body class="container">
+			<div class="jumbotron">
+				<div class="container">
+					<h1 class="text-center">Control de Usuarios</h1>
+				</div>
+			</div>
+
+		<div class="container">
+			<div class=row>
+				<div class="col-md-1 col-md-offset-9">
+					<button class="btn btn-info" id="Actualizar">Actualizar</button>
+					
+				</div>
+				<div class="col-md-1" >
+					<button class="btn btn-success" data-toggle="modal" data-target="#miVentana">Nuevo Registro</button>
+					
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-md-10 col-md-offset-1">
+					<table class="table table-striped table-bordered table-md table-hover" id="listado">
+						<thead>
+							<tr>
+								<th>UsuarioID</th>
+								<th>Nombre</th>
+								<th>Apellido Paterno</th>
+								<th>Apellido Materno</th>
+								<th>Tipo</th>
+								<th>Categoria</th>
+								<th>Opciones</th>
+							</tr>
+						</thead>
+						<tbody>
+							
+						</tbody>
+						<tfoot>
+						
+						</tfoot>
+					</table>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-5">
+					<h1 id="Numero"></h1>
+					<h3 id="Nombre"></h3>
+					<h3 id="Categoria"></h3>
+					<h3 id="Tipo"></h3>
+
+					<button class="btn btn-warning" id="boton2">Consultar a</button>
+				</div>
+			</div>
+		</div>
+		<div class="modal fade" tabindex="-1" role="dialog" data-backdrop="static" data-keyboard="false" id="miVentana"><!-- -1 coloca la pantalla al frente sin que nada mas este encima de ella data-back-drop debe dar click sobre el popup data-keyboard elimina las opciones de la tecla scape-->
+			<div class="modal-dialog modal-lg" role="document">
+				
+				<div class="modal-content">
+					<div class="modal-header">
+						<button class="close" data-dismiss="modal" arial-label="close">
+							<span arial-hidden="true">&times;</span>
+						</button>
+						<h4 class="modal-title">Registro de Usuarios</h4>
+					</div>
+					<div class="modal-body">
+						<div class="row">
+							<form id="controlUsuarios">
+								<div class="form-goup">
+									<!-- opciones para input tipo text, email, password y url
+									<div class="row">
+										<div class="col-md-4">
+									<label for="prueba">Prueba</label>
+									<div class="input-group">
+										<div class="input-group-addon">$</div>
+										
+										<input type="text" name="prueba" id="prueba" class="form-control">
+										<div class="input-group-addon">.00</div>
+									</div>
+									</div>
+									</div>
+
+									<div class="radio"> opcion de la clase radio o checkbox
+										<label for="radio1">
+											<input type="radio" name="radio1" id="radio1">
+											texto radio1
+										</label>
+										<label for="radio2">
+											<input type="radio" name="radio1" id="radio2">
+											texto radio1
+										</label>
+									</div>-->
+
+									<div class="col-md-6">
+										<label for="usuarioid">Numero:</label>	
+										<input type="number" name="usuarioid" class="form-control" id="usuarioid" >
+									</div>
+									<div class="col-md-6">
+										<label for="nombre_usuario">Nombre:</label>
+										<input type="text" name="nombre_usuario" class="form-control" id="nombre_usuario">
+									</div>
+									<div class="col-md-6">
+										<label for="apellido_paterno">Apellido Paterno:</label>
+										<input type="text" name="apellido_paterno" class="form-control" id="apellido_paterno">
+									</div>
+									<div class="col-md-6">
+										<label for="apellido_materno">Apellido Materno:</label>
+										<input type="text" name="apellido_materno" class="form-control" id="apellido_materno">
+									</div>
+									<div class="col-md-6">
+										<label for="contraseña">Contraseña:</label>
+										<input type="password" name="contraseña" class="form-control" id="contraseña">
+									</div>
+									<div class="col-md-6">
+										<label>Tipo de usuario:</label> 
+										<select class="form-control" id="tipo">
+											<option value="Administrativo">Administrativo</option>
+											<option value="Docente">Docente</option>
+										</select>									
+									</div>
+									<div class="col-md-6">
+										<label>Categoria:</label>
+										<select class="form-control">
+											<option value="Administrador">Administrador</option>
+											<option value="Responsable de Area">Responsable de Area</option>
+										</select>
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+					<div class="modal-footer">
+						<button class="btn btn-success" id="btn-guardar"><i class="far fa-save"></i> Guardar</button>
+						<button class="btn btn-info"><i class="fal fa-bat"></i> Editar</button>
+						<button class="btn btn-warning">Cancelar</button>
+						<button class="btn btn-danger">Borrar</button>
+						<button class="btn btn-secondary" data-dismiss="modal">cerrar</button>
+					</div>
+				</div>
+			
+			</div>
+		</div>
+		</body>
+		</html>
